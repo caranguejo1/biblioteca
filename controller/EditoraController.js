@@ -1,3 +1,4 @@
+import '../relacionamentos.js'
 import Editora from "../model/EditoraModelo.js"
 
 async function listar(req, res) {

@@ -1,33 +1,37 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../banco.js";
 
-const Autor = sequelize.define("autor", {
-    idautor: {
+const Usuario = sequelize.define("usuario", {
+    idusuario: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
     },
-    nomeautor: {
+    nome: {
         type: DataTypes.STRING(60),
         allowNull: false
-    },
-    biografia: {
-        type: DataTypes.STRING,
-        allowNull: true
-    },
-    nacionalidade: {
-        type: DataTypes.STRING(60),
-        allowNull: true
     },
     nascimento: {
         type: DataTypes.DATEONLY,
+        allowNull: true
+    },
+    cpf: {
+        type: DataTypes.STRING(15),
+        allowNull: true
+    },
+    email: {
+        type: DataTypes.STRING(100),
         allowNull: false
     },
-    foto: {
-        type: DataTypes.STRING,
+    telefone: {
+        type: DataTypes.STRING(15),
+        allowNull: true
+    },
+    senha: {
+        type: DataTypes.STRING(100),
         allowNull: true
     }
 });
 
-export default Autor;
+export default Usuario;

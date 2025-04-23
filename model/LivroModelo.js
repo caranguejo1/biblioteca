@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../banco.js";
+
 const Livro = sequelize.define("livro", {
     id :{
         type: DataTypes.INTEGER,
@@ -27,6 +28,15 @@ const Livro = sequelize.define("livro", {
     id_autor: {
         type: DataTypes.INTEGER,
         allowNull: false,
+    },
+    id_editora: {
+        type: DataTypes.INTEGER,
+        allowNull:false,
+    },
+    id_emprestimo: {
+        type: DataTypes.INTEGER,
+        allowNull:false,
     }
 });
+
 export default Livro;

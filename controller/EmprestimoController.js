@@ -1,5 +1,7 @@
-import { where } from "sequelize";
+import '../relacionamentos.js'
 import Emprestimo from "../model/EmprestimoModelo.js"
+import Livro from "../model/LivroModelo.js";
+import Usuario from "../model/UsuarioModelo.js";
 
 async function listar(req, res) {
     const respostaBanco = await Emprestimo.findAll();

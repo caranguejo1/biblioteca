@@ -1,3 +1,4 @@
+import '../relacionamentos.js'
 import Autor from "../model/AutorModelo.js"
 
 async function listar(req, res) {
