@@ -33,9 +33,10 @@ const Livro = sequelize.define("livro", {
         type: DataTypes.INTEGER,
         allowNull:false,
     },
-    id_emprestimo: {
-        type: DataTypes.INTEGER,
-        allowNull:false,
+    disponivel: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: true
     }
 });
 
